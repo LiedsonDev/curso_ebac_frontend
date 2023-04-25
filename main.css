@@ -1,0 +1,135 @@
+* { /* Reset a estilização da página padrão do navegador */
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+body > header { /* o sinal de maior que está indicando qual elemento header queremos estilizar, leia: o elemento pai "body" e o elemento filho "header", o elemento que descende direto do body */
+    background-color: rgb(48, 45, 45);
+    padding: 16px 0;
+    color: white; /* propriedade que muda a cor de um texto */
+}
+
+header .container {
+    display: flex; /* os elementos ficam um do lado do outro */
+    align-items: center; /* os itens na header estavam desalinhados, essa propriedade (flex-box) alinha itens */
+    justify-content: space-between; /* agora temos um espaçamento igualitário, pois não queremos o título ao lado do menu, ou um deles na extrema direita ou o outro na extrema esquerda */
+}
+
+header li { /* estilizando menu */
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container { /* limitando o tamanho dos nossos containers, como aparecerá na tela do usuário */
+    width: 1260px; /* 1366 */
+    margin: 0 auto;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap; /* permite que quando a limitação da linha acabe a próx notícia apareça abaixo */
+    justify-content: space-between; /* permite uma divisão igualitária entre os itens, eles vão preencher o espaço todo, já que definimos 30% de espaço para kda 1 e sobrou 10% de espaço */
+}
+
+.articles article img {
+    /*height: 180px;*/
+    width: 100%;
+}
+
+.articles article {
+    width: 30%; /* limita a linha, a largura, uma vez que a largura é 100%, logo cada notícia deve ocupar 30%, então apenas 3 notícias por linha */
+}
+
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article { /* podemos aproveitar a configuração para mais de 1 elemento */
+    margin-bottom: 16px;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a { /* estilizando a aparência geral dos botões */
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    display: inline-block; /* o elemento "a" possui a propriedade display inline como padrão, por isso estamo tirando */
+    text-decoration: none; /* removendo o traço de baixo, pois como padrão tem underline */
+    font-weight: bold; /* alterando o "peso" da fonte, colocando-a em negrito */
+    margin-top: 8px;
+}
+
+.articles article a:hover { /* selecionando um estado do elemento, no caso "hover" é para quando passa o mouse por cima do elemento faz algo */
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif; /* tipo da fonte */
+}
+
+.articles article h3 {
+    font-size: 24px; /* tamanho da fonte */
+}
+
+section h2 {
+    font-size: 32px; /* o titulo deve ser maior na escala de prioridade, por isso aumentamos 8px a mais do que o h3 */
+}
+
+/* estilizando seção de esportes */
+#sports { 
+    background-color: rgba(0, 225, 0, 0.116); /* o "a" significa transparência */
+}
+
+#sports .articles article a { /* definindo a cor dos botões da seção esportes */
+    background-color: rgb(100, 165, 3);
+}
+
+/* estilizando a seção de economia */
+#economy { 
+    background-color: rgba(216, 241, 187, 0.651);
+}
+
+#economy .articles article a {
+    background-color: rgb(250, 173, 29);
+}
+
+/* estilizando a seção de tecnologia */
+#tecnology {
+    background-color: rgba(241, 252, 139, 0.411);
+}
+
+#tecnology .articles article a {
+    background-color: rgb(128, 126, 0);
+}
+
+#papa {
+    height: 60%;
+}
+
+/* estilizando a seção de momento cultural */
+#movies { 
+    background-color: rgba(252, 238, 162, 0.26);
+}
+
+#movies .articles article a {
+    background-color: rgba(107, 25, 14, 0.596);
+}
+
+#movies .articles article img {
+    height: 450px;
+    width: 315px;
+}
